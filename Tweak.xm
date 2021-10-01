@@ -57,7 +57,7 @@ NSString *kTemperatureUnit;
 }
 
 %new 
-- (void)changeLabelTextWithAttributedString:(NSMutableAttributedString *)text {
+- (void)changeLabelTimeWithAttributedString:(NSMutableAttributedString *)time {
 	CATransition *animation = [CATransition animation];
 	animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
 	animation.type = kCATransitionPush;
@@ -65,11 +65,11 @@ NSString *kTemperatureUnit;
 	animation.duration = 0.3;
 	[self.layer addAnimation:animation forKey:@"kCATransitionPush"];
 
-	self.attributedText = text;
+	self.attributedTime = time;
 }
 
 %new 
-- (void)changeLabelText:(NSString *)text {
+- (void)changeLabelTime:(NSString *)time {
 	CATransition *animation = [CATransition animation];
 	animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
 	animation.type = kCATransitionPush;
@@ -77,7 +77,7 @@ NSString *kTemperatureUnit;
 	animation.duration = 0.3;
 	[self.layer addAnimation:animation forKey:@"kCATransitionPush"];
 
-	self.text = text;
+	self.time = time;
 }
 
 %end
